@@ -5,7 +5,7 @@ node {
     
     
     environment{
-        PATH = "/usr/local/src/apache-maven/bin:$PATH"
+     PATH = "/usr/local/src/apache-maven/bin:${PATH}"
     
         stage('Checkout') {
             git url: 'https://github.com/saurabh0010/sample-spring-microservices.git', CredentialsID: 'github', branch: 'master'
