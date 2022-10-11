@@ -2,6 +2,12 @@
 
 //[code language="java"]
 node {
+       pipeline{
+    
+    agent any
+    environment{
+        PATH = "/usr/local/src/apache-maven"
+    }
         stage('Checkout') {
             git url: 'https://github.com/saurabh0010/sample-spring-microservices.git', CredentialsID: 'github', branch: 'master'
         }
